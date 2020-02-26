@@ -1,0 +1,14 @@
+[Unit]
+Description=Python Loop
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 -u python_loop.py
+WorkingDirectory=/home/pi
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
